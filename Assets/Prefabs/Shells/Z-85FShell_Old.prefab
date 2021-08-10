@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0dcb05f758d30b4f84cdbf54c35e648, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numFragments: 12
+  numFragments: 10
   fixedSpread: 0
   spin: 0
   fragProjectile: {fileID: 8386605503765369876, guid: cac9e50877d2ada498d708034c463540,
