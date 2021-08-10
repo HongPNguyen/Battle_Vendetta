@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a03de416cf45f314ea77f36dc7fc960e, type: 3}
+  m_Name: Lv2-Boss
+  m_EditorClassIdentifier: 
+  allLines:
+  - {fileID: 11400000, guid: 6eb191c3ed0892447ac55808ad17e5e4, type: 2}
+  - {fileID: 11400000, guid: 6bd853a5248ec8a4d86dd8dc6ad681d9, type: 2}
+  - {fileID: 11400000, guid: 9ab4c82993b321045a624f684be0bf29, type: 2}
+  - {fileID: 11400000, guid: fd5f8f3b601d30647b000997c92ab1ac, type: 2}
+  - {fileID: 11400000, guid: 7dfcef385fd34b94aa0943900f96cc11, type: 2}
+  - {fileID: 11400000, guid: 0f7ae28c509b2af4abd38192f7b5182b, type: 2}
+  priority: 1

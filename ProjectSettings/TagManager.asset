@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Bullet
+  - Enemy
+  - ActivePlayer
+  - SecondaryWeapon
+  - HealthBar
+  - DefenseBar
+  - Cooldown
+  - Ammo
+  - NameText
+  - Ally
+  - IntroBlackCondor
+  - Lv1BlackCondor
+  - Coin
+  - Airos
+  - Airos
+  - IntroCondor
+  - IntroAiros
+  - ControlsBillboard
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Player
+  - Turret
+  - Side Turret
+  - Flak
+  - Tracks
+  - Enemy Bullets
+  - Player Bullets
+  - Screen
+  - Screen
+  - camera_target
+  - Ground Enemies
+  - Background
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background
+    uniqueID: 700721713
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Bullets
+    uniqueID: 3424022637
+    locked: 0

@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6543970222750219840
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6543970222750219842}
+  - component: {fileID: 6543970222750219843}
+  - component: {fileID: 6543970222750220221}
+  m_Layer: 0
+  m_Name: HangarManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6543970222750219842
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6543970222750219840}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 12.273186, y: 2.4361527, z: -422.30692}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6543970222750219843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6543970222750219840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac54f515998de64b93c8d65a8a24444, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plane1: {fileID: 0}
+  plane2: {fileID: 0}
+  plane3: {fileID: 0}
+  i: {fileID: 0}
+  squadron: {fileID: 0}
+  slots1:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  slots2:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  slots3:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  primary: {fileID: 21300000, guid: 5f0cbbe5e1aab4d4cb599600fe85f7ac, type: 3}
+  secondary: {fileID: 21300000, guid: 60f8d0541f31cb346a5d48b22c6d9e88, type: 3}
+  shopList: {fileID: 0}
+  primaryList: {fileID: 0}
+  secondaryList: {fileID: 0}
+  ammo: {fileID: 0}
+  gbutton: {fileID: 7096910263496070457, guid: 1545e90541a46f34098306fba47a6194, type: 3}
+  sbutton: {fileID: 7096910263496070457, guid: ae96a9233d0f2a2448798ce30eeb4335, type: 3}
+  s1: {fileID: 0}
+  st1: {fileID: 0}
+  s2: {fileID: 0}
+  st2: {fileID: 0}
+  s3: {fileID: 0}
+  st3: {fileID: 0}
+  s4: {fileID: 0}
+  st4: {fileID: 0}
+--- !u!114 &6543970222750220221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6543970222750219840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca8c09c712d31e14694a517eb53ba06a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

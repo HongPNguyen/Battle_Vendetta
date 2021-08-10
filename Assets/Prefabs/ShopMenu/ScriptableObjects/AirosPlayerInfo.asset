@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05c20efd7a412b6458a692962830f6a7, type: 3}
+  m_Name: AirosPlayerInfo
+  m_EditorClassIdentifier: 
+  cardType: 1
+  obj: {fileID: 8486769585253000526, guid: 66ccad57f439f8441857d1700d235a9a, type: 3}
+  unlockLevel: 1
+  name: Airos
+  cost: 0
+  artwork: {fileID: 21300000, guid: 4fccfa3763b67724eb678177cc5c146a, type: 3}
+  description: A recent experiment from the fine folks at Eglin, Airos is less of
+    a warplane and more of a suicide vehicle. Flying at breakneck speed and armed
+    to the teeth with a giant fuel tank just waiting to explode, it's no wonder the
+    hawk's pilots tend to go big or go home.
+  gunSlotNum: 5
+  gunSlotObj:
+  - {fileID: 4267489263255516703, guid: 66ccad57f439f8441857d1700d235a9a, type: 3}
+  - {fileID: 1669167417007176018, guid: 66ccad57f439f8441857d1700d235a9a, type: 3}
+  - {fileID: 3177319286345385475, guid: 66ccad57f439f8441857d1700d235a9a, type: 3}
+  - {fileID: 1087104659872682935, guid: 66ccad57f439f8441857d1700d235a9a, type: 3}
+  - {fileID: 5870457752181881640, guid: 66ccad57f439f8441857d1700d235a9a, type: 3}
+  slotType: 0000000000000000010000000100000001000000
+  slotGrade: 0200000002000000010000000100000003000000
+  slotCategory: 0100000001000000020000000200000002000000
+  positionScaleX:
+  - 73.23943
+  - 73.23943
+  - 65.86538
+  - 65.86538
+  - 0
+  positionScaleY:
+  - -65.78947
+  - -65.78947
+  - -42.22222
+  - -42.22222
+  - -73.71349
+  hangarScaleX:
+  - 0.7
+  - 0.7
+  - 0.6
+  - 0.6
+  - 1
+  hangarScaleY:
+  - 0.7
+  - 0.7
+  - 0.6
+  - 0.6
+  - 1

@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05c20efd7a412b6458a692962830f6a7, type: 3}
+  m_Name: Ju-5Info
+  m_EditorClassIdentifier: 
+  cardType: 1
+  obj: {fileID: 7837649921252861507, guid: 3565b9f7e0284924ea5d6b03f689356c, type: 3}
+  unlockLevel: 1
+  name: Ju-5
+  cost: 0
+  artwork: {fileID: 21300000, guid: 4da60e5525cd8f04a94e01223747ced0, type: 3}
+  description: "Popular striker from the post-war period, recently updated with homing
+    missiles. Amy keeps calling it old and rusty, and the only reason we still have
+    it in reserves is to sell overstock to third-world countries, but that\u2019s
+    just to hide her affection towards the plane she started off with."
+  gunSlotNum: 4
+  gunSlotObj:
+  - {fileID: 3620957942479572567, guid: 3565b9f7e0284924ea5d6b03f689356c, type: 3}
+  - {fileID: 4139709637892056285, guid: 3565b9f7e0284924ea5d6b03f689356c, type: 3}
+  - {fileID: 8140403906029390184, guid: 3565b9f7e0284924ea5d6b03f689356c, type: 3}
+  - {fileID: 3232701750077332026, guid: 3565b9f7e0284924ea5d6b03f689356c, type: 3}
+  slotType: 00000000000000000100000001000000
+  slotGrade: 00000000000000000000000000000000
+  slotCategory: 01000000010000000200000002000000
+  positionScaleX:
+  - 100
+  - 100
+  - 108.2353
+  - 108.2353
+  positionScaleY:
+  - 194.4
+  - 194.4
+  - 115.813
+  - 115.813
+  hangarScaleX:
+  - 0.3
+  - 0.3
+  - 0.35
+  - 0.35
+  hangarScaleY:
+  - 1.2
+  - 1.2
+  - 1
+  - 1

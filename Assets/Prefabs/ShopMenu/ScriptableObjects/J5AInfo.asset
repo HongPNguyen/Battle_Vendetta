@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05c20efd7a412b6458a692962830f6a7, type: 3}
+  m_Name: J5AInfo
+  m_EditorClassIdentifier: 
+  cardType: 2
+  obj: {fileID: 5212117213648905250, guid: 14a5006e12f55684bb198433dc05b1b9, type: 3}
+  unlockLevel: 3
+  name: J5A
+  cost: 200
+  artwork: {fileID: 21300000, guid: 4a15714f990e0664a8004613658a5fe2, type: 3}
+  description: Post-war era aerial machinegun.
+  gunSlotNum: 0
+  gunSlotObj: []
+  slotType: 
+  slotGrade: 
+  slotCategory: 
+  positionScaleX: []
+  positionScaleY: []
+  hangarScaleX: []
+  hangarScaleY: []
+  gunScaleX: 0.3
+  gunScaleY: 1.2

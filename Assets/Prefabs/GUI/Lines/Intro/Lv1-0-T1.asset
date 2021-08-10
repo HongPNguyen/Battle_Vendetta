@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a2f63616827c174587c8e0a16a2f217, type: 3}
+  m_Name: Lv1-0-T1
+  m_EditorClassIdentifier: 
+  textLine: "<color=lime><b>Commander:</b></color> Nice! Slick isn\u2019t it? I got
+    it from my old man who got it from a friend of a friend. Rusty thing I know,
+    but there\u2019s only two in the world, so I\u2019m keeping it. It\u2019s nice
+    to fly in sometimes."
+  sprite: {fileID: 21300000, guid: e30878c3564b3234f97562685947d9f4, type: 3}
+  time: 0

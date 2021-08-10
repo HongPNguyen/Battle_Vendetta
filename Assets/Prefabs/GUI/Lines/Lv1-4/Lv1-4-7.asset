@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a2f63616827c174587c8e0a16a2f217, type: 3}
+  m_Name: Lv1-4-7
+  m_EditorClassIdentifier: 
+  textLine: "<color=purple><b>Lynch:</b></color> Don\u2019t worry though, this one\u2019s
+    pretty fragile. Even your Flying Pancake might be able to take it down\u2026
+    provided the enemy pilot is dumb enough of course."
+  sprite: {fileID: 21300000, guid: 35853b8d9841e8e44bf797556e4f3e02, type: 3}
+  time: 33

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a03de416cf45f314ea77f36dc7fc960e, type: 3}
+  m_Name: Lv1-Debrief
+  m_EditorClassIdentifier: 
+  allLines:
+  - {fileID: 11400000, guid: 54dc69f3c71b35948b6b8ac63ac54c14, type: 2}
+  - {fileID: 11400000, guid: 6eacb189fcc55214a96006960bb73ca0, type: 2}
+  - {fileID: 11400000, guid: b8805bb2ff5872f4f8b682ff59935434, type: 2}
+  - {fileID: 11400000, guid: 3a8decc4e47d83f4491ff29a08065515, type: 2}
+  - {fileID: 11400000, guid: d39f72a73771733489f4980bdb8efea0, type: 2}
+  - {fileID: 11400000, guid: 2ffad73fbed8e1543be7e857de89706c, type: 2}
+  - {fileID: 11400000, guid: 7f6ace8ea38b4ab4f9e333a1f3b2bbfc, type: 2}
+  priority: 10

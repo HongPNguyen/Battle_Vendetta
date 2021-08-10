@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05c20efd7a412b6458a692962830f6a7, type: 3}
+  m_Name: AirosMissileInfo
+  m_EditorClassIdentifier: 
+  cardType: 3
+  obj: {fileID: 4449166682222306337, guid: d2526dc27c70f2a458c717f00b366aa0, type: 3}
+  unlockLevel: 1
+  name: Airos Missile
+  cost: 200
+  artwork: {fileID: 21300000, guid: 964ed9c5617741a48a7fe5ccef8b7c1d, type: 3}
+  description: 'Armor-destroying missiles used by Airoses.
+
+
+    EXPLOSIVE POWER:
+    50
+
+    SEEK TIME: 5 s'
+  gunSlotNum: 0
+  gunSlotObj: []
+  slotType: 
+  slotGrade: 
+  slotCategory: 

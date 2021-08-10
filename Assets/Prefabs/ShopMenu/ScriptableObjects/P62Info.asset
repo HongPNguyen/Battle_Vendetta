@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05c20efd7a412b6458a692962830f6a7, type: 3}
+  m_Name: P62Info
+  m_EditorClassIdentifier: 
+  cardType: 1
+  obj: {fileID: 7119300060938102185, guid: 3b9d17012a5ce7148a2b00b41d5e8337, type: 3}
+  unlockLevel: 1
+  name: P-62
+  cost: 2000
+  artwork: {fileID: 21300000, guid: f274b40870737aa47ac7b41cc7c2201d, type: 3}
+  description: An old relic from World War II, fittingly dubbed the Flying Tank,
+    the P62 can barely fly but is adept at crippling heavy armor. Most fighters of
+    the time could not penetrate its enforced frame, so they just used missiles instead.
+  gunSlotNum: 1
+  gunSlotObj:
+  - {fileID: 7119300060750479612, guid: 3b9d17012a5ce7148a2b00b41d5e8337, type: 3}
+  slotType: 02000000
+  slotGrade: 01000000
+  slotCategory: 01000000
+  positionScaleX:
+  - 0
+  positionScaleY:
+  - 31.41361
+  hangarScaleX:
+  - 1
+  hangarScaleY:
+  - 1

@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05c20efd7a412b6458a692962830f6a7, type: 3}
+  m_Name: SR5Info
+  m_EditorClassIdentifier: 
+  cardType: 2
+  obj: {fileID: 6120377998642513973, guid: 04820f265e0467d488fe3761de6df88f, type: 3}
+  unlockLevel: 1
+  name: SR5
+  cost: 100
+  artwork: {fileID: 21300000, guid: b226aff88aed5f549915e064f67d9394, type: 3}
+  description: Old makeshift machinegun designed by an angry navy.
+  gunSlotNum: 0
+  gunSlotObj: []
+  slotType: 
+  slotGrade: 
+  slotCategory: 
+  positionScaleX: []
+  positionScaleY: []
+  hangarScaleX: []
+  hangarScaleY: []
+  gunScaleX: 1
+  gunScaleY: 1
