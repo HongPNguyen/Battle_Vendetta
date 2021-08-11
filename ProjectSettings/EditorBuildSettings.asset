@@ -17,9 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TerrodScene.unity
     guid: c03318751af60bd4eaafa98a6200516d
-  - enabled: 0
-    path: Assets/Scenes/ShopMenu.unity
-    guid: b4bae2ef30324db4e9ec0d7d524bfac7
   - enabled: 1
     path: Assets/Scenes/Hangar.unity
     guid: 12fa15ef09b94c34c87776246412df7a
