@@ -13,6 +13,8 @@ public class PlayerLaser : SecondaryWeapon
     private bool startParticlesPlaying = false;
     private bool prestartParticlesPlaying = false;
     private bool endParticlesPlaying = false;
+    protected float origScale;
+    protected float scale;
 
     // Timing variables
     public float preLaserDuration = 2;
@@ -40,6 +42,7 @@ public class PlayerLaser : SecondaryWeapon
         laserStartParticles.Stop(true);
         preLine.enabled = false;
         line.enabled = false;
+        origScale = line.startWidth;
     }
 
     // Update is called once per frame
@@ -76,12 +79,23 @@ public class PlayerLaser : SecondaryWeapon
                 //laserStartParticles.gameObject.transform.position = transform.position;
                 preLine.enabled = false;
                 line.enabled = true;
+                // Scale laser for visual realism
+                /*scale = Time.deltaTime * (2f / (1f + Mathf.Exp(-timeDifference * laserEfficiency)) - 1f) * origScale;
+                AnimationCurve curve = new AnimationCurve();
+                curve.AddKey(0, scale);
+                curve.AddKey(1, scale);
+                line.widthCurve = curve;*/
                 return;
             }
 
             // Laser stop
             if (startParticlesPlaying == true && (timeDifference > laserDuration))
             {
+                // If start particles (laser's function part) have stopped, end the laser and reset scale
+                AnimationCurve curve = new AnimationCurve();
+                curve.AddKey(0, origScale);
+                curve.AddKey(1, origScale);
+                line.widthCurve = curve;
                 startParticlesPlaying = false;
                 laserStartParticles.Stop(true);
                 line.enabled = false;

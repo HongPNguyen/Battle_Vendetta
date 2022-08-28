@@ -13,9 +13,11 @@ public class Laser : MonoBehaviour
     public ParticleSystem laserEndParticles;
     public LineRenderer line;
     public LineRenderer preLine;
-    private bool startParticlesPlaying = false;
-    private bool prestartParticlesPlaying = false;
-    private bool endParticlesPlaying = false;
+    protected bool startParticlesPlaying = false;
+    protected bool prestartParticlesPlaying = false;
+    protected bool endParticlesPlaying = false;
+    protected float origScale;
+    protected float scale;
 
     // Timing variables
     public float timeBetweenFiring = 10;
@@ -45,6 +47,7 @@ public class Laser : MonoBehaviour
         laserStartParticles.Stop(true);
         preLine.enabled = false;
         line.enabled = false;
+        origScale = line.startWidth;
     }
 
     // Update is called once per frame
@@ -79,12 +82,24 @@ public class Laser : MonoBehaviour
                 //laserStartParticles.gameObject.transform.position = transform.position;
                 preLine.enabled = false;
                 line.enabled = true;
+
+                // Scale laser for visual realism
+                /*scale = Time.deltaTime * (2f / (1f + Mathf.Exp(-timeDifference * laserEfficiency)) - 1f) * origScale;
+                AnimationCurve curve = new AnimationCurve();
+                curve.AddKey(0, scale);
+                curve.AddKey(1, scale);
+                line.widthCurve = curve;*/
                 return;
             }
 
             // Laser stop
             if (startParticlesPlaying == true && (timeDifference > laserDuration))
             {
+                // If start particles (laser's function part) have stopped, end the laser and reset scale
+                AnimationCurve curve = new AnimationCurve();
+                curve.AddKey(0, origScale);
+                curve.AddKey(1, origScale);
+                line.widthCurve = curve;
                 startParticlesPlaying = false;
                 laserStartParticles.Stop(true);
                 line.enabled = false;
@@ -108,7 +123,7 @@ public class Laser : MonoBehaviour
                     if (e != null)
                     {
                         // Take damage by Sigmoid function
-                        e.TakeDamage((power - e.defense) * Time.deltaTime * (2 / (1 + Mathf.Exp(-timeDifference * laserEfficiency)) - 1));
+                        e.TakeDamage((power - e.defense) * Time.deltaTime * (2f / (1f + Mathf.Exp(-timeDifference * laserEfficiency)) - 1f));
                     }
                 }
             }
@@ -148,7 +163,6 @@ public class Laser : MonoBehaviour
         }
         else
         {
-            // If laser is no longer active, stop impact particles
             laserEndParticles.Stop(true);
             endParticlesPlaying = false;
         }
