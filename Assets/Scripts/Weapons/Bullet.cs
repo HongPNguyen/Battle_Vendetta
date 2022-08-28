@@ -9,6 +9,9 @@ public class Bullet : WeaponsClassification
     public float speed;
 
     // Parameters
+    protected const float EXPIRATION_RATIO = 0.9f; // Bullet "expires" once 90% of its speed has been lost.
+
+    protected Vector3 origScale;
     protected float curPower;
     protected float curSpeed;
     public float penetration = 0;
@@ -38,6 +41,7 @@ public class Bullet : WeaponsClassification
         base.Start();
         rb = GetComponent<Rigidbody2D>();
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        origScale = transform.localScale;
     }
 
     // Update is called every frame
@@ -46,15 +50,21 @@ public class Bullet : WeaponsClassification
         base.Update();
         time += Time.deltaTime;
         // Speed deterioration, destroy without any behavior if expires
-        if (deterioration * time >= 0.9)
+        if (deterioration * time >= EXPIRATION_RATIO)
         {
             time = 0;
             ObjectPoolManager.SharedInstance.ReturnPooledObject(gameObject.name, gameObject);
         }
         if (curSpeed > 0)
+        {
             rb.velocity = curSpeed * (1f - deterioration * time) * rb.transform.up;
+            // Also shrink bullet for visual realism
+            transform.localScale = Mathf.Pow(1f - deterioration * time, 2f/3f) * origScale;
+        }
         else
+        {
             rb.velocity = new Vector2(0, 0);
+        }
 
         // Effect calls
         if (time >= selfDestructTime && selfDestructTime > 0)
