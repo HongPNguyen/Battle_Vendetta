@@ -51,7 +51,6 @@ public class CutsceneController : MonoBehaviour
         if (introNeeded && progression == 0 && !introStarted && player != null)
         {
             introStarted = true;
-            player.GetComponent<Player>().SeizeMovement();
             if (ControlsBillboard != null) ControlsBillboard.SetActive(true);
         }
         
@@ -59,8 +58,6 @@ public class CutsceneController : MonoBehaviour
 
         if (timepassed - timestart > timeforintro && introNeeded)
         {
-            if (player != null) player.GetComponent<Player>().ReleaseMovement();
-            
             if (isTutorialObjectiveDone && !tutorialActivated) StartTutorial();
         }
 
@@ -87,11 +84,6 @@ public class CutsceneController : MonoBehaviour
             StartCondorFlees();
         }
 
-        if(timeEucalypsoAttack != -1 && timepassed - timeEucalypsoAttack > timeforEucalypso && player != null)
-        {
-            player.GetComponent<Player>().ReleaseMovement();
-        }
-
         if(GameObject.FindWithTag("Airos") != null && !airosArrived)
         {
             StartAirosCutscene();
@@ -105,21 +97,15 @@ public class CutsceneController : MonoBehaviour
 
     void StartTutorial()
     {
-        //player = GameObject.FindWithTag("ActivePlayer");
-        //cutsceneAnimator.SetBool("deployDrone", true);
         tutorialActivated = true;
     }
 
     void EndTutorial()
     {
-        //player.GetComponent<Animator>().SetBool("freezeplayer", true);
-
     }
 
     void StartAirosCutscene()
     {
-        //Scene1Airos = GameObject.Find("Airos");
-        //airosMove = Scene1Airos.GetComponent<Animator>();
         airosMove = GameObject.FindWithTag("IntroAiros").GetComponent<Animator>();
         airosMove.SetBool("playIntro", true);
         airosArrived = true;
@@ -137,21 +123,15 @@ public class CutsceneController : MonoBehaviour
 
     void StartCondorFlees()
     {
-        //Scene1BlackCondor = GameObject.Find("Black Condor Lv 1");
-        //if(sceneCondor == null) sceneCondor = GameObject.FindWithTag("IntroBlackCondor");
-        //sceneCondor.SetActive(false);
         condorMove = Scene1BlackCondor.GetComponent<Animator>();
         cutsceneAnimator.SetBool("eucAttack", true);
         condorMove.SetBool("condorEscape", true);
-        //player.GetComponent<Animator>().SetBool("dodgebomb", true);
-        player.GetComponent<Player>().SeizeMovement();
         timeEucalypsoAttack = Time.time;
         condorFled = true;
     }
 
     public void TutorialTimeDone()
     {
-        //tutorialComplete = true;
         cutsceneAnimator.SetBool("deployDrone", false);
     }
     public void CondorIntroDone()
