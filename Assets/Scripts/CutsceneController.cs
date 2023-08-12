@@ -67,11 +67,6 @@ public class CutsceneController : MonoBehaviour
             if (ControlsBillboard != null) ControlsBillboard.SetActive(false);
         }
 
-        //Tutorial checks
-        //player = GameObject.FindWithTag("ActivePlayer");
-        
-        //if (player.GetComponent<Animator>().GetBool("introcomplete")) EndTutorial();
-
         //Cutscene checks
         
         if(GameObject.FindWithTag("IntroCondor") != null && !condorIntroComplete)
@@ -98,10 +93,6 @@ public class CutsceneController : MonoBehaviour
     void StartTutorial()
     {
         tutorialActivated = true;
-    }
-
-    void EndTutorial()
-    {
     }
 
     void StartAirosCutscene()
