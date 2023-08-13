@@ -3,32 +3,33 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-//Manages the level select menu
+/// <summary>
+/// Manages the level select menu.
+/// </summary>
 public class LevelSelect : MonoBehaviour
-
 {
+    /// <summary>
+    /// Starts the "Crimson Flare" mission (Mission 1) with boss "Airos".
+    /// </summary>
     public void AirosStart()
     {
-          SceneTransition.upcomingScene = 2;
-          Scene1Controller.ResetCheckpoints();
-          //If Airos has already been beaten before, allow the player to go to the Hangar
-          if (Progression.progress[0] == 1)
-               SceneManager.LoadScene("Hangar");
-          else
-               SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneTransition.upcomingScene = SceneManager.GetSceneByName("AirosScene").buildIndex;
+        Scene1Controller.ResetCheckpoints();
+
+        //If Airos has already been beaten before, allow the player to go to the Hangar
+        if (Progression.lastLevelCompleted >= 1)
+            SceneManager.LoadScene("Hangar");
+        else
+            SceneManager.LoadScene("AirosScene");
     }
 
+    /// <summary>
+    /// Starts the "Orange Dust" mission (Mission 2) with boss "Terrod".
+    /// </summary>
     public void TerrodStart()
     {
-        SceneTransition.upcomingScene = 3;
-          Scene2Controller.ResetCheckpoints();
+        SceneTransition.upcomingScene = SceneManager.GetSceneByName("TerrodScene").buildIndex;
+        Scene2Controller.ResetCheckpoints();
         SceneManager.LoadScene("Hangar");
     }
-
-    public void LynchStart()
-    {
-        Debug.Log("Coming Soon");
-    }
-
-
 }

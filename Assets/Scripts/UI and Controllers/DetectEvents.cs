@@ -48,7 +48,7 @@ public class DetectEvents : MonoBehaviour
             if (levelEndTimer >= levelEndTime)
             {
                 Debug.Log("boss is dead");
-                Progression.ProgressUpdate(SceneTransition.upcomingScene - 2); //Upcoming scene still represents the current level
+                Progression.ReportLevelCompleted(SceneTransition.upcomingScene - 2); //Upcoming scene still represents the current level
                 SceneControllerCore.ResetCheckpoints(); // Reset checkpoints of current level so next time level starts at beginning
                  
                 //Clear the squadron

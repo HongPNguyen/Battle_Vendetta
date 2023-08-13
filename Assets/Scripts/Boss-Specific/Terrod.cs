@@ -80,7 +80,7 @@ public class Terrod : MonoBehaviour
         if (turretRigMain == null && turretRig1 == null && turretRig2 == null && flak1 == null && flak2 == null)
         {
             //Set the correct progression bool to true
-            Progression.ProgressUpdate(1);
+            Progression.ReportLevelCompleted(1);
             //Death animation
             terrodAnimator = gameObject.GetComponent<Animator>();
             GameObject.Find("TextEffectsTerrod").GetComponent<Animator>().SetBool("BossDoomed", true);

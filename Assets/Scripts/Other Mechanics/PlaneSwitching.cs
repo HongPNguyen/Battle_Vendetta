@@ -24,18 +24,16 @@ public class PlaneSwitching : MonoBehaviour
     {
           if (SceneManager.GetActiveScene().name != "Hangar")
           {
-               if (defaultSquad && Progression.progress[0] == 1)
+               if (defaultSquad && Progression.lastLevelCompleted >= 1)
                     transform.gameObject.SetActive(false);
-               else if (!defaultSquad && Progression.progress[0] == 1)
+               else if (!defaultSquad && Progression.lastLevelCompleted >= 1)
                     transform.parent = GameObject.Find("Main Camera").transform;
 
                size = squadronSize;
                switchTimer = 0f;
                isDead = false;
                bars = GameObject.Find("HUD").GetComponent<Sidebars>();
-               //squadronSize = transform.childCount;
                //Assign numbers to the planes
-               //squadArr = new GameObject[transform.childCount];
                for (int i = 0; i < transform.childCount; i++)
                {
                     squadArr[i] = transform.GetChild(i).gameObject;
@@ -46,8 +44,6 @@ public class PlaneSwitching : MonoBehaviour
                {
                     if (squadArr[i] != null)
                     {
-                         //squadArr[i] = Instantiate(squadArr[i], transform);
-                         //Debug.Log("Setup should work");
                          squadArr[i].GetComponent<Player>().SetUp();
                     }
                }
@@ -141,7 +137,6 @@ public class PlaneSwitching : MonoBehaviour
                          isDead = true;
                     }
 
-                    //Debug.Log("New PLane should spawn");
                     for (int j = 0; j < squadArr.Length; j++)
                     {
                          if (squadArr[j] != null && squadArr[j].GetComponent<Player>().GetIsDestroyed() == 1)
