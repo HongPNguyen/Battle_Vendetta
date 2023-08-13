@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This script sets the color of a weapons slot in the hangar based on its grade.
+/// </summary>
 public class GunSlot : WeaponsClassification
 {
     // Reference to Sprite Renderer component, for changing color
