@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Audio;
 
-/*
- * This class serves to manage the main menu of the game.
- */
+/// <summary>
+/// This class serves to manage the main menu of the game.
+/// </summary>
 public class MainMenu : MonoBehaviour
 {
     public GameObject OptionMenu;
@@ -25,40 +25,23 @@ public class MainMenu : MonoBehaviour
     public AudioClip hoverFx;
     public AudioClip clickFx;
 
-    public void HoverSound()
-    {
-        myFx.PlayOneShot(hoverFx);
-    }
+    #region Start
 
-    public void ClickSound()
-    {
-        myFx.PlayOneShot(clickFx);
-    }
-
-    public void delay()
-    {
-        StartCoroutine(TemporarilyDeactivate(2.0f));
-    }
-
-    private IEnumerator TemporarilyDeactivate(float duration)
-    {
-        OptionMenu.SetActive(false);
-        yield return new WaitForSeconds(duration);
-        OptionMenu.SetActive(true);
-    }
-
+    /// <summary>
+    /// Prepare settings menu on load.
+    /// </summary>
     public void Start()
     {
         // Get distinct supported resolutions
         var resolutions = Screen.resolutions.Select(resolution => new Resolution { width = resolution.width, height = resolution.height }).Distinct();
 
-        // clear out default options to start with a cealn resoulation 
+        // Clear out default options to start with a clean resolutions list based on system environment.
         resolutionDropdown.ClearOptions();
 
         // converting array to list for add options
         List<string> options = new List<string>();
 
-        // add element option list
+        // Add supported resolutions to list
         foreach (Resolution res in resolutions)
         {
             string option = res.width + " x " + res.height;
@@ -72,64 +55,74 @@ public class MainMenu : MonoBehaviour
         sfxSlider.value = PlayerPrefs.GetFloat("sfxVolume", 0.8f);
     }
 
+    #endregion
+
+    #region Game loader
+
+    public void PlayGame()
+    {
+        SceneManager.LoadScene("LevelSelect");
+    }
+
+    #endregion
+
+    #region Resolution settings
+
     // Change resolution
     protected void ResolutionChanged(Dropdown menu)
     {
+        /* Parse resolution "1280 x 720" by space
+         * Hence screen width is element 0, height is element 2. */
         string[] chosenRes = menu.captionText.text.Split(' ');
         int.TryParse(chosenRes[0], out int chosenWidth);
         int.TryParse(chosenRes[2], out int chosenHeight);
         Screen.SetResolution(chosenWidth, chosenHeight, fullscreen);
     }
 
-    // Set fullscreen
     public void SetFullScreen(bool isFullscreen)
     {
         fullscreen = isFullscreen;
         Screen.fullScreen = isFullscreen;
     }
 
+    #endregion
 
-    public void LoadingGame()
-    {
-        Invoke("PlayGame", 2.0f);
-    }
+    #region Sounds & sound settings
 
-
-
-    // Starts the game
-    public void PlayGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
-
-    // Goes to settings menu
-    // TODO: Modify this so that we don't have to change it each time the scene order is changed
-    public void GoToSettings()
-    {
-        SceneManager.LoadScene(5);
-    }
-
-    // Adjust music 
     public void SetMusicVolume(float volume)
     {
         PlayerPrefs.SetFloat("musicVolume", volume);
-        musicMixer.SetFloat("volume", Mathf.Log(volume) * 20);
+        musicMixer.SetFloat("volume", Mathf.Log(volume) * 20); // dB calculation (log * 20)
     }
 
     public void SetSFXVolume(float volume)
     {
         PlayerPrefs.SetFloat("sfxVolume", volume);
-        sfxMixer.SetFloat("volume", Mathf.Log(volume) * 20);
+        sfxMixer.SetFloat("volume", Mathf.Log(volume) * 20); // dB calculation (log * 20)
     }
 
 
+    public void PlayHoverSound()
+    {
+        myFx.PlayOneShot(hoverFx);
+    }
+
+    public void PlayClickSound()
+    {
+        myFx.PlayOneShot(clickFx);
+    }
+
+    #endregion
+
+    #region Quit button
 
     // Quits the application
     public void QuitGame()
     {
-        Debug.Log("Game Quit");
-        //reset all levels
+        // Reset all levels
         PlayerPrefs.DeleteAll();
         Application.Quit();
     }
+
+    #endregion
 }
